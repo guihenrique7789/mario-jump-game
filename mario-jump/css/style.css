@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #5c94fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game-board{
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEE8, #E0F6FF);
+    border: 4px solid #333;
+    border-bottom: none;
+}
+
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; 
+    background: url('./images/ground.png') repeat-x;
+    background-size: contain;
+    background-color: green; 
+    z-index: 3;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 100px;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+    z-index: 4;
+}
+
+.mario{
+    width: 130px;
+    position: absolute;
+    bottom: 100px; 
+    left: 50px;
+    z-index: 5;
+}
+
+.jump{
+  animation: jump 600ms ease-out;
+}
+
+.clouds{
+    width: 300px;
+    position: absolute;
+    animation: clouds-animation 25s infinite linear;
+    z-index: 1;
+}
+
+.grass-ground {
+    position: absolute;
+    bottom: 100px; 
+    z-index: 2;
+}
+
+.grass1-ground {
+    width: 80px;
+    right: -80px;
+    animation: grass-ground-animation 10s infinite linear;
+}
+
+.grass2-ground {
+    width: 60px;
+    right: -60px;
+    animation: grass-ground-animation 8s infinite linear;
+}
+
+.spin-effect {
+    position: absolute;
+    bottom: 100px; 
+    width: 130px;
+    display: none;
+    z-index: 6;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 100px;
+    }
+    40%{
+        bottom: 280px;
+    }
+    50%{
+        bottom: 280px;
+    }
+    60%{
+        bottom: 280px;
+    }
+    100%{
+        bottom: 100px;
+    }
+}
+
+@keyframes clouds-animation{
+    from {
+        right: -300px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes grass-ground-animation {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 100%;
+    }
+}
