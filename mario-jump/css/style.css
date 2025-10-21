@@ -24,7 +24,6 @@ body {
     border-bottom: none;
 }
 
-
 .ground {
     position: absolute;
     bottom: 0;
@@ -50,6 +49,88 @@ body {
     bottom: 100px; 
     left: 50px;
     z-index: 5;
+    transition: all 0.3s ease;
+}
+
+
+.peach {
+    width: 90px;
+    position: absolute;
+    bottom: 100px; 
+    z-index: 4; 
+    right: -90px; 
+    animation: peach-walk 90s infinite linear;
+    animation-delay: 45s;
+}
+
+.bowser {
+    width: 100px;
+    position: absolute;
+    bottom: 100px; 
+    z-index: 3.5; 
+    right: -120px; 
+    animation: bowser-chase 90s infinite linear;
+    animation-delay: 50s; 
+}
+
+.koopa {
+    width: 70px;
+    position: absolute;
+    z-index: 1; 
+    top: 40px; 
+    right: -70px; 
+    animation: koopa-fly 8s infinite linear; 
+    animation-delay: 15s; 
+}
+
+.sonic {
+    width: 130px;
+    height: 110px;
+    position: absolute;
+    bottom: 50px; 
+    z-index: 3.8;
+    left: -130px;
+    animation: sonic-appear 10s infinite linear;
+    animation-delay: 25s;
+}
+
+.tails {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    bottom: 50px; 
+    z-index: 3.8;
+    left: -140px;
+    animation: tails-appear 11s infinite linear;
+    animation-delay: 25.2s;
+}
+
+.bird {
+    width: 25px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.8;
+    right: -25px; 
+}
+
+.bird1 {
+    top: 60px;
+    animation: bird-fly 20s infinite linear 5s;
+}
+
+.bird2 {
+    top: 130px;
+    animation: bird-fly 18s infinite linear 10s;
+}
+
+.bird3 {
+    top: 90px;
+    animation: bird-fly 25s infinite linear 15s;
+}
+
+.bird4 {
+    top: 90px;
+    animation: bird-fly 21s infinite linear 20s;
 }
 
 .jump{
@@ -131,5 +212,92 @@ body {
     }
     to {
         right: 100%;
+    }
+}
+
+
+@keyframes bird-fly {
+    0% {
+        right: -25px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+
+@keyframes peach-walk {
+    0% {
+        right: -90px; 
+    }
+    5% {
+        right: 50%; 
+    }
+    10% {
+        right: 100%;
+    }
+    100% {
+        right: 100%; 
+    }
+}
+
+@keyframes koopa-fly {
+    0% {
+        right: -70px;
+    }
+    10% {
+        right: 30%; 
+    }
+    20% {
+        right: 100%; 
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes bowser-chase {
+    0% {
+        right: -120px; 
+    }
+    4% {
+        right: 35%; 
+    }
+    9% {
+        right: 100%; 
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+
+@keyframes sonic-appear {
+    0% {
+        left: -130px;
+        bottom: 100px;
+    }
+    25% {
+        left: 100%;
+        bottom: 100px;
+    }
+    100% {
+        left: 100%;
+        bottom: 100px;
+    }
+}
+
+@keyframes tails-appear {
+    0% {
+        left: -140px;
+        bottom: 100px;
+    }
+    27% {
+        left: 100%;
+        bottom: 100px;
+    }
+    100% {
+        left: 100%;
+        bottom: 100px;
     }
 }
