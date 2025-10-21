@@ -1,6 +1,6 @@
 # 🎮 Mario Jump Game
 
-Jogo do Mario desenvolvido com **HTML5, CSS3 e JavaScript puro**.
+Jogo do Mario desenvolvido com **HTML5, CSS3 e JavaScript**.
 
 ## 🎯 Funcionalidades
 - ✅ Sistema de pulo com animação
@@ -15,14 +15,13 @@ Jogo do Mario desenvolvido com **HTML5, CSS3 e JavaScript puro**.
 
 ## 🛠️ Tecnologias Utilizadas
 - HTML5
-- CSS3 (Animações Keyframes)
-- JavaScript (DOM Manipulation)
-- Git e GitHub
-
+- CSS3 
+- JavaScript 
 ## 🎵 Créditos
 - Sprites: Nintendo
 - Música: Super Mario World
-
+https://youtu.be/r9buAwVBDhA?si=ZAmpPyabo8B1Jtcq
 ---
+
 
 **Desenvolvido por [Guilherme Henrique](https://github.com/guihenrique7789)**
