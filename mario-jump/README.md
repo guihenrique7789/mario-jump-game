@@ -20,8 +20,10 @@ Jogo do Mario desenvolvido com **HTML5, CSS3 e JavaScript**.
 ## 🎵 Créditos
 - Sprites: Nintendo
 - Música: Super Mario World
-https://youtu.be/r9buAwVBDhA?si=ZAmpPyabo8B1Jtcq
+
+- Vídeo: https://youtu.be/r9buAwVBDhA?si=ZAmpPyabo8B1Jtcq
 ---
 
 
 **Desenvolvido por [Guilherme Henrique](https://github.com/guihenrique7789)**
+
