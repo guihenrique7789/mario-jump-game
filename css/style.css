@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #5c94fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game-board{
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEE8, #E0F6FF);
+    border: 4px solid #333;
+    border-bottom: none;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; 
+    background: url('./images/ground.png') repeat-x;
+    background-size: contain;
+    background-color: green; 
+    z-index: 3;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 100px;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+    z-index: 4;
+}
+
+.mario{
+    width: 130px;
+    position: absolute;
+    bottom: 100px; 
+    left: 50px;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+
+.peach {
+    width: 90px;
+    position: absolute;
+    bottom: 100px; 
+    z-index: 4; 
+    right: -90px; 
+    animation: peach-walk 90s infinite linear;
+    animation-delay: 45s;
+}
+
+.bowser {
+    width: 100px;
+    position: absolute;
+    bottom: 100px; 
+    z-index: 3.5; 
+    right: -120px; 
+    animation: bowser-chase 90s infinite linear;
+    animation-delay: 50s; 
+}
+
+.koopa {
+    width: 70px;
+    position: absolute;
+    z-index: 1; 
+    top: 40px; 
+    right: -70px; 
+    animation: koopa-fly 8s infinite linear; 
+    animation-delay: 15s; 
+}
+
+.sonic {
+    width: 130px;
+    height: 110px;
+    position: absolute;
+    bottom: 50px; 
+    z-index: 3.8;
+    left: -130px;
+    animation: sonic-appear 10s infinite linear;
+    animation-delay: 25s;
+}
+
+.tails {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    bottom: 50px; 
+    z-index: 3.8;
+    left: -140px;
+    animation: tails-appear 11s infinite linear;
+    animation-delay: 25.2s;
+}
+
+.bird {
+    width: 25px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.8;
+    right: -25px; 
+}
+
+.bird1 {
+    top: 60px;
+    animation: bird-fly 20s infinite linear 5s;
+}
+
+.bird2 {
+    top: 130px;
+    animation: bird-fly 18s infinite linear 10s;
+}
+
+.bird3 {
+    top: 90px;
+    animation: bird-fly 25s infinite linear 15s;
+}
+
+.bird4 {
+    top: 90px;
+    animation: bird-fly 21s infinite linear 20s;
+}
+
+.jump{
+  animation: jump 600ms ease-out;
+}
+
+.clouds{
+    width: 300px;
+    position: absolute;
+    animation: clouds-animation 25s infinite linear;
+    z-index: 1;
+}
+
+.grass-ground {
+    position: absolute;
+    bottom: 100px; 
+    z-index: 2;
+}
+
+.grass1-ground {
+    width: 80px;
+    right: -80px;
+    animation: grass-ground-animation 10s infinite linear;
+}
+
+.grass2-ground {
+    width: 60px;
+    right: -60px;
+    animation: grass-ground-animation 8s infinite linear;
+}
+
+.spin-effect {
+    position: absolute;
+    bottom: 100px; 
+    width: 130px;
+    display: none;
+    z-index: 6;
+}
+
+.score-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.score {
+    font-family: 'Super Mario World', 'Press Start 2P', 'Courier New', monospace;
+    font-size: 32px; 
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+        3px 3px 0 #000000,
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 3px solid #ff0000;
+    letter-spacing: 3px;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 100px;
+    }
+    40%{
+        bottom: 280px;
+    }
+    50%{
+        bottom: 280px;
+    }
+    60%{
+        bottom: 280px;
+    }
+    100%{
+        bottom: 100px;
+    }
+}
+
+@keyframes clouds-animation{
+    from {
+        right: -300px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes grass-ground-animation {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+@keyframes bird-fly {
+    0% {
+        right: -25px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+
+@keyframes peach-walk {
+    0% {
+        right: -90px; 
+    }
+    5% {
+        right: 50%; 
+    }
+    10% {
+        right: 100%;
+    }
+    100% {
+        right: 100%; 
+    }
+}
+
+@keyframes koopa-fly {
+    0% {
+        right: -70px;
+    }
+    10% {
+        right: 30%; 
+    }
+    20% {
+        right: 100%; 
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes bowser-chase {
+    0% {
+        right: -120px; 
+    }
+    4% {
+        right: 35%; 
+    }
+    9% {
+        right: 100%; 
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+
+@keyframes sonic-appear {
+    0% {
+        left: -130px;
+        bottom: 100px;
+    }
+    25% {
+        left: 100%;
+        bottom: 100px;
+    }
+    100% {
+        left: 100%;
+        bottom: 100px;
+    }
+}
+
+@keyframes tails-appear {
+    0% {
+        left: -140px;
+        bottom: 100px;
+    }
+    27% {
+        left: 100%;
+        bottom: 100px;
+    }
+    100% {
+        left: 100%;
+        bottom: 100px;
+    }
+}
+
+@font-face {
+    font-family: 'Super Mario World';
+    src: url('./fonts/Super-Mario-World.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
